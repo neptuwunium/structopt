@@ -1,0 +1,35 @@
+test_sources = [
+	'main.cpp',
+	'test_single_positional_argument.cpp',
+	'test_array_positional_argument.cpp',
+	'test_3d_array_positional_argument.cpp',
+	'test_single_optional_argument.cpp',
+	'test_array_optional_argument.cpp',
+	'test_single_positional_and_optional.cpp',
+	'test_nested_struct.cpp',
+	'test_multiple_nested_structs_positional.cpp',
+	'test_vector_positional_argument.cpp',
+	'test_vector_optional_argument.cpp',
+	'test_optional_flag_argument.cpp',
+	'test_enum_positional_argument.cpp',
+	'test_enum_optional_argument.cpp',
+	'test_optional_argument_naming.cpp',
+	'test_double_dash_option_delimiter.cpp',
+	'test_trailing_positional_arguments.cpp',
+	'test_tuple_positional_argument.cpp',
+	'test_tuple_optional_argument.cpp',
+	'test_deque_positional_argument.cpp',
+	'test_deque_optional_argument.cpp',
+	'test_set_positional_argument.cpp',
+	'test_list_positional_argument.cpp',
+	'test_container_adapter_positional_argument.cpp',
+	'test_combined_flag_arguments.cpp',
+	'test_equal_delimiter_optional_argument.cpp',
+	'test_option_delimiter.cpp',
+	'test_excess_positional_arguments.cpp',
+	'test_unknown_optional_argument.cpp',
+]
+
+doctest_dep = dependency('doctest')
+structopt_tests = executable('structopt_tests', test_sources, dependencies : [structopt_dep, doctest_dep])
+test('structopt test', structopt_tests)

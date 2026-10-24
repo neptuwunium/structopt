@@ -1,0 +1,9 @@
+[wrap-file]
+directory = visit_struct-1.2.0
+source_url = https://github.com/cbeck88/visit_struct/archive/refs/tags/1.2.0.tar.gz
+source_filename = visit_struct-1.2.0.tar.gz
+source_hash = aa0f4cc674ee584e0498604971c8bbdc0eeb7d6d6386c95695211b0418ff2bef
+patch_directory = visit_struct
+
+[provide]
+visit_struct = visit_struct_dep
